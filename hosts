@@ -1,0 +1,16 @@
+127.0.0.1	localhost
+127.0.1.1	joecricmore-ThinkPad-T480
+#127.0.0.2      l.akerolabs.admin.database.com
+#127.0.0.3      l.akerolabs.activity.database.com
+#127.0.0.4      l.akerolabs.logging.database.com
+127.0.0.5       l.hellovm.akerolabs.com
+10.0.2.2        l.hello.akerolabs.com
+192.168.1.40    l.hello.akerolabs.com
+10.0.2.15       l.hello.akerolabs.com
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
