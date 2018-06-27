@@ -1,28 +1,28 @@
 #!/bin/bash
 user=$(whoami)
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install net-tools
-sudo apt-get -y install build-essential
-sudo apt-get -y install nginx
-sudo nginx -s stop
-sudo service nginx start
-sudo apt-get -y install nodejs
-sudo apt-get -y install npm
-sudo apt-get -y install virtualbox
-sudo apt-get -y install vagrant
-sudo vagrant box add ubuntu/bionic64 --force
+apt-get -y update
+apt-get -y upgrade
+apt-get -y install net-tools
+apt-get -y install build-essential
+apt-get -y install nginx
+nginx -s stop
+service nginx start
+apt-get -y install nodejs
+apt-get -y install npm
+apt-get -y install virtualbox
+apt-get -y install vagrant
+vagrant box add ubuntu/bionic64 --force
 mkdir /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes
-sudo chmod -R +x /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes
-sudo chown -R joecricmore /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes
+chmod -R +x /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes
+chown -R joecricmore /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes
 cd /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes
 #sudo vagrant init ubuntu/bionic64
-sudo chmod -R +x /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes
+chmod -R +x /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes
 git init
 git clone https://github.com/PandaJoey/vagrantfileAndProvisionsFile.git
 cd /home/joecricmore/workspace/vagrantstuff/test/vagrantboxes/vagrantfileAndProvisionsFile/
-sudo vagrant up
+vagrant up
 #git clone https://github.com/PandaJoey/vagrantTestScript.git
 #cd vagrantTestScript/
 #need to change the file here some how
@@ -49,15 +49,15 @@ server {
                 proxy_buffering off;
         }
 }" > hello-app
-sudo mv hello-app /etc/nginx/sites-enabled/
-sudo nginx -s stop
-sudo service nginx start
+mv hello-app /etc/nginx/sites-enabled/
+nginx -s stop
+service nginx start
 mkdir /home/joecricmore/workspace/vagrantstuff/test/nodeprojects/
-sudo chmod -R +x /home/joecricmore/workspace/vagrantstuff/test/nodeprojects/
-sudo chown -R joecricmore /home/joecricmore/workspace/vagrantstuff/test/nodeprojects/
+chmod -R +x /home/joecricmore/workspace/vagrantstuff/test/nodeprojects/
+chown -R joecricmore /home/joecricmore/workspace/vagrantstuff/test/nodeprojects/
 cd /home/joecricmore/workspace/vagrantstuff/test/nodeprojects/
 git init
 git clone https://github.com/PandaJoey/vagrantTestScript.git
 cd /home/joecricmore/workspace/vagrantstuff/test/nodeprojects/vagrantTestScript/
-sudo npm install -y
-sudo node app.js &
+npm install -y
+node app.js &
