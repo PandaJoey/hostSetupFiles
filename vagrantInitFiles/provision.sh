@@ -56,6 +56,7 @@ mv hello-app /etc/nginx/sites-enabled/
 mv hellovm-app /etc/nginx/sites-enabled/
 sudo nginx -s stop
 sudo service nginx start
+cd ..
 cd /vagrantTestScript
 npm install -y
 node app.js &
