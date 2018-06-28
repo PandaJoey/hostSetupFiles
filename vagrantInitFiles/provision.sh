@@ -6,8 +6,10 @@ apt-get -y install nginx
 service nginx start
 apt-get -y install nodejs
 apt-get -y install npm
-git clone https://github.com/PandaJoey/vagrantTestScript.git
-cd vagrantTestScript/
+git clone https://github.com/PandaJoey/vagrantSetupAndHostFiles.git
+cd vagrantSetUpAndHostFiles/hostConnections/
+sudo rm -rf /etc/hosts
+sudo mv hosts /etc/hosts
 ip="$(ifconfig | grep lo -A 2 | grep inet  | awk '{match($0,/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/); ip = substr($0,RSTART,RLENGTH); print ip}')"
 echo "upstream app_Hello {
         server $ip:3012;
