@@ -1,5 +1,6 @@
 apt-get -y update
 apt-get -y upgrade
+apt-get -y install net-tools
 apt-get -y install build-essential
 apt-get -y install nginx
 service nginx start
@@ -13,7 +14,7 @@ echo "upstream app_Hello {
 }" > hello-app
 echo 'server {
         listen 80;
-        server_name l.hellov.akerolabs.com;
+        server_name l.hello.akerolabs.com;
         access_log /var/log/nginx/hello-admin.log;
         location / {
                 proxy_set_header X-Real-IP $remote_addr;
